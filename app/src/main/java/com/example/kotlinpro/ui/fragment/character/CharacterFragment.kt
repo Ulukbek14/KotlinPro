@@ -4,13 +4,14 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kotlinpro.R
 import com.example.kotlinpro.common.base.BaseFragment
 import com.example.kotlinpro.databinding.FragmentCharacterBinding
 import com.example.kotlinpro.ui.adapter.CharacterAdapter
-import com.example.kotlinpro.ui.adapter.load.LoadStateAdapter
+import com.example.kotlinpro.ui.adapter.paging.LoadStateAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -40,7 +41,7 @@ class CharacterFragment :
     }
 
     override fun setupRecycler() = with(binding){
-        rvCharacter.layoutManager = LinearLayoutManager(context)
+        rvCharacter.layoutManager = GridLayoutManager(requireContext(), 2)
         rvCharacter.adapter = characterAdapter.withLoadStateFooter(
             LoadStateAdapter { characterAdapter.retry() })
     }

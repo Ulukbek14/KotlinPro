@@ -10,7 +10,7 @@ import com.example.kotlinpro.R
 import com.example.kotlinpro.common.base.BaseFragment
 import com.example.kotlinpro.databinding.FragmentEpisodeBinding
 import com.example.kotlinpro.ui.adapter.EpisodeAdapter
-import com.example.kotlinpro.ui.adapter.load.LoadStateAdapter
+import com.example.kotlinpro.ui.adapter.paging.LoadStateAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

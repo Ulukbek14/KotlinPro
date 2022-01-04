@@ -1,9 +1,9 @@
 package com.example.kotlinpro
 
 import android.app.Application
-import com.example.kotlinpro.di.networkModule
-import com.example.kotlinpro.di.repositoriesModel
-import com.example.kotlinpro.di.viewModelsModule
+import com.example.kotlinpro.servicelocated.networkModule
+import com.example.kotlinpro.servicelocated.repositoriesModel
+import com.example.kotlinpro.servicelocated.viewModelsModule
 import dagger.hilt.android.HiltAndroidApp
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

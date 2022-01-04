@@ -36,7 +36,6 @@ class CharacterAdapter(private val onItemClick: (name: String, id: Int) -> Unit,
 
         fun onBind(item: CharacterDto) = with(binding) {
             itemCharacterName.text = item.name
-            itemCharacterId.text = item.id.toString()
             Glide.with(itemCharacterIv)
                 .load(item.image)
                 .into(itemCharacterIv)

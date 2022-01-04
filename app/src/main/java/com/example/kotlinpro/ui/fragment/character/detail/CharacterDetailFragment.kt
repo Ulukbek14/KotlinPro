@@ -38,6 +38,7 @@ class CharacterDetailFragment : BaseFragment<CharacterDetailViewModel, FragmentC
 
                 }
                 is UIState.Success -> {
+                    itemCharacterId.text = it.data.id.toString()
                     itemCharacterDetailName.text = it.data.name
                     itemCharacterDetailStatus.text = it.data.status
                     itemCharacterDetailSpecies.text = it.data.species

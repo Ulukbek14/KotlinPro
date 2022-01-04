@@ -1,4 +1,4 @@
-package com.example.kotlinpro.di
+package com.example.kotlinpro.servicelocated
 
 import com.example.kotlinpro.data.network.RetrofitClient
 import com.example.kotlinpro.data.network.repository.CharacterRepository

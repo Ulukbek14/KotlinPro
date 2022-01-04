@@ -1,4 +1,4 @@
-package com.example.kotlinpro.ui.adapter.load
+package com.example.kotlinpro.ui.adapter.paging
 
 import android.view.ViewGroup
 import androidx.paging.LoadState
