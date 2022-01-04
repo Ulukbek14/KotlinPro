@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/black"
+    android:background="#191818"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,12 +21,12 @@
         android:id="@+id/item_location_detail_name"
         android:text="Pilot"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -34,11 +34,11 @@
         android:id="@+id/item_location_detail_url"
         tools:text="@tools:sample/full_names"
         android:textColor="@color/white"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/item_location_detail_name"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -46,11 +46,11 @@
         android:id="@+id/item_location_detail_created"
         tools:text="@tools:sample/full_names"
         android:textColor="@color/white"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/item_location_detail_url"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

@@ -8,9 +8,8 @@ import com.example.kotlinpro.data.network.apiservise.LocationApiService
 import com.example.kotlinpro.data.network.dtos.LocationDto
 import com.example.kotlinpro.data.network.pagingsources.LocationPagingSource
 import kotlinx.coroutines.flow.Flow
-import javax.inject.Inject
 
-class LocationRepository @Inject constructor(
+class LocationRepository (
     private val service: LocationApiService) : BaseRepository() {
 
     fun locationRepository(): Flow<PagingData<LocationDto>> {

@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="#00BDC5"
         android:layout_width="match_parent"
-        android:layout_height="180dp">
+        android:layout_height="190dp">
 
         <TextView
             android:id="@+id/item_location_id"

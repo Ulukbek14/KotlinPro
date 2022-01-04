@@ -8,9 +8,8 @@ import com.example.kotlinpro.data.network.apiservise.EpisodeApiService
 import com.example.kotlinpro.data.network.dtos.EpisodeDto
 import com.example.kotlinpro.data.network.pagingsources.EpisodePagingSource
 import kotlinx.coroutines.flow.Flow
-import javax.inject.Inject
 
-class EpisodeRepository @Inject constructor(
+class EpisodeRepository (
     private val service: EpisodeApiService) : BaseRepository() {
 
     fun episodeRepository(): Flow<PagingData<EpisodeDto>> {

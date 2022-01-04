@@ -5,6 +5,6 @@ import com.example.kotlinpro.data.network.apiservise.EpisodeApiService
 import com.example.kotlinpro.data.network.dtos.EpisodeDto
 
 class EpisodePagingSource(
-    private val service: EpisodeApiService) :
-    BasePagingSource<EpisodeDto>({ position -> service.fetchEpisodesApiService(position)
+    private val service: EpisodeApiService) : BasePagingSource<EpisodeDto>({ position ->
+    service.fetchEpisodesApiService(position)
 })

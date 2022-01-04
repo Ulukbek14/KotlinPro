@@ -5,6 +5,6 @@ import com.example.kotlinpro.data.network.apiservise.CharacterApiService
 import com.example.kotlinpro.data.network.dtos.CharacterDto
 
 class CharacterPagingSource(
-    private val service: CharacterApiService) :
-    BasePagingSource<CharacterDto>({ position -> service.fetchCharactersApiService(position)
+    private val service: CharacterApiService) : BasePagingSource<CharacterDto>({ position ->
+    service.fetchCharactersApiService(position)
 })

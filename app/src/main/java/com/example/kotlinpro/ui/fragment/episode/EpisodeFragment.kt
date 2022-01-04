@@ -1,7 +1,6 @@
 package com.example.kotlinpro.ui.fragment.episode
 
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -12,18 +11,15 @@ import com.example.kotlinpro.common.base.BaseFragment
 import com.example.kotlinpro.databinding.FragmentEpisodeBinding
 import com.example.kotlinpro.ui.adapter.EpisodeAdapter
 import com.example.kotlinpro.ui.adapter.load.LoadStateAdapter
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@InternalCoroutinesApi
-@AndroidEntryPoint
 class EpisodeFragment :
     BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(R.layout.fragment_episode) {
 
     override val binding by viewBinding(FragmentEpisodeBinding::bind)
-    override val viewModel: EpisodeViewModel by viewModels()
+    override val viewModel: EpisodeViewModel by viewModel()
     private val episodeAdapter = EpisodeAdapter(this::setOnItemListener)
 
     override fun initialize() = with(binding){

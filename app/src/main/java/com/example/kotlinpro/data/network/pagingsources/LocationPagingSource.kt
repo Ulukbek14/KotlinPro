@@ -5,6 +5,6 @@ import com.example.kotlinpro.data.network.apiservise.LocationApiService
 import com.example.kotlinpro.data.network.dtos.LocationDto
 
 class LocationPagingSource(
-    private val service: LocationApiService) :
-    BasePagingSource<LocationDto>({ position -> service.fetchLocationsApiService(position)
+    private val service: LocationApiService) : BasePagingSource<LocationDto>({ position ->
+    service.fetchLocationsApiService(position)
 })

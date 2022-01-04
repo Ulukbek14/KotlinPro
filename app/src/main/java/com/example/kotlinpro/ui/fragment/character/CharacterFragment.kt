@@ -1,7 +1,6 @@
 package com.example.kotlinpro.ui.fragment.character
 
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -12,16 +11,15 @@ import com.example.kotlinpro.common.base.BaseFragment
 import com.example.kotlinpro.databinding.FragmentCharacterBinding
 import com.example.kotlinpro.ui.adapter.CharacterAdapter
 import com.example.kotlinpro.ui.adapter.load.LoadStateAdapter
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class CharacterFragment :
     BaseFragment<CharacterViewModel, FragmentCharacterBinding>(R.layout.fragment_character) {
 
     override val binding by viewBinding(FragmentCharacterBinding::bind)
-    override val viewModel: CharacterViewModel by viewModels()
+    override val viewModel: CharacterViewModel by viewModel()
     private val characterAdapter = CharacterAdapter(this::setOnItemClickListener)
 
     override fun initialize() = with(binding) {
