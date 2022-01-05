@@ -21,7 +21,8 @@ class CharacterFragment :
 
     override val binding by viewBinding(FragmentCharacterBinding::bind)
     override val viewModel: CharacterViewModel by viewModel()
-    private val characterAdapter = CharacterAdapter(this::setOnItemClickListener)
+    private val characterAdapter = CharacterAdapter(this::setOnItemClickListener,
+        this::setOnItemLongClickListener)
 
     override fun initialize() = with(binding) {
         characterAdapter.addLoadStateListener { loadStates ->
@@ -56,6 +57,14 @@ class CharacterFragment :
         findNavController().navigate(
             CharacterFragmentDirections.actionCharacterFragmentToCharacterDetailFragment(
                 label = "${"Character"} $name", id = id
+            )
+        )
+    }
+
+    private fun setOnItemLongClickListener(photo: String) {
+        findNavController().navigate(
+            CharacterFragmentDirections.actionCharacterFragmentToCharacterDialogFragment(
+                image = photo
             )
         )
     }

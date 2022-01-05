@@ -9,7 +9,8 @@ import com.example.kotlinpro.common.base.BaseComparator
 import com.example.kotlinpro.data.network.dtos.CharacterDto
 import com.example.kotlinpro.databinding.ItemCharacterBinding
 
-class CharacterAdapter(private val onItemClick: (name: String, id: Int) -> Unit,) :
+class CharacterAdapter(private val onItemClick: (name: String, id: Int) -> Unit,
+                       private val onLongClick: (image: String) ->Unit) :
     PagingDataAdapter<CharacterDto, CharacterAdapter.CharacterViewHolder>(
         BaseComparator()) {
 
@@ -31,6 +32,12 @@ class CharacterAdapter(private val onItemClick: (name: String, id: Int) -> Unit,
                 getItem(bindingAdapterPosition)?.let {
                     onItemClick(it.name, it.id)
                 }
+            }
+            binding.root.setOnLongClickListener{
+                getItem(absoluteAdapterPosition)?.let {
+                    onLongClick(it.image)
+                }
+                return@setOnLongClickListener false
             }
         }
 
